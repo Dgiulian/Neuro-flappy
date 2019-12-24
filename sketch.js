@@ -1,4 +1,4 @@
-const TOTAL = 500;
+const TOTAL = 250;
 let birds = [];
 let savedBirds = [];
 let pipes = [];
@@ -9,6 +9,7 @@ let bestScore = 0;
 let generation = 0;
 function setup() {
   createCanvas(600, 400);
+  tf.setBackend('cpu');
   for (let i = 0; i < TOTAL; i++) {
     birds.push(new Bird());
   }
@@ -63,4 +64,11 @@ function showStatistics() {
   document.getElementById('highScore').innerText = `High Score: ${highScore}`;
   document.getElementById('bestScore').innerText = `Best score: ${bestScore}`;
   document.getElementById('generation').innerText = `Generation: ${generation}`;
+}
+
+
+function keyPressed() {
+  if(key === 's') {
+    
+  }
 }

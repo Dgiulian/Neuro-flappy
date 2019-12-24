@@ -52,4 +52,7 @@ class Bird {
     this.velocity += this.gravity;
     this.y += this.velocity;
   }
+  dispose() {
+    this.brain.dispose();
+  }
 }
